@@ -4,6 +4,10 @@ ADDED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xm
 INJECTED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xml:2:1-24:12
+MERGED from [:core:designsystem] C:\Users\Thanush\projects\vpn\android\core\designsystem\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:core:navigation] C:\Users\Thanush\projects\vpn\android\core\navigation\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:core:model] C:\Users\Thanush\projects\vpn\android\core\model\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:core:common] C:\Users\Thanush\projects\vpn\android\core\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\daeef63388b0f00c7f2aac7c7fa16396\workspace\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\c24068973b375377d95d7bc40b441d62\workspace\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\69663440482c9f2884f8642ee12ddff4\workspace\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
@@ -26,16 +30,17 @@ MERGED from [androidx.compose.ui:ui-util-android:1.6.1] C:\Users\Thanush\.gradle
 MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\69e22cb88fecb4865de1f77eee74dac6\workspace\transformed\jetified-ui-unit-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\a2469044f6f84ebc346b421ef4670d6a\workspace\transformed\jetified-ui-graphics-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\6957414bc94cd70387566814d5792483\workspace\transformed\jetified-ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\3a15110cfd857a51ab4ca41e28675fbf\workspace\transformed\jetified-ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-text-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\9a92d178308a45b0607a3c8b74086519\workspace\transformed\jetified-ui-text-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\83c00a2e0b7142c599d3ee8653d11220\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\9e07dac3868bd6ebe07aae537627d93c\workspace\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\9a78f1fa6849d3a52debc6a568dbc39c\workspace\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\bb95d4a46cfdfb2b01011e6132817f69\workspace\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\8549e11cf602867d0009bbd223de753b\workspace\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\b86590f5e81710b0d800a4c08a70c1fa\workspace\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\db3723dda633d700ad198c2e680fc7e2\workspace\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\e36d37ae8ec215f2202791c9fbbeeb68\workspace\transformed\jetified-savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\40e86080e151a565d45fa63feb68c77d\workspace\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\b86590f5e81710b0d800a4c08a70c1fa\workspace\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\05cdd5ffd3d4b3532cdcaba5dd886108\workspace\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\6a91bb1ea8b94566fb9330f8c1db5bf9\workspace\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\a1b7177e107687d2856e4c611a53c952\workspace\transformed\jetified-lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:17:1-22:12
@@ -114,6 +119,14 @@ uses-sdk
 INJECTED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Thanush\projects\vpn\android\app\src\main\AndroidManifest.xml
+MERGED from [:core:designsystem] C:\Users\Thanush\projects\vpn\android\core\designsystem\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:designsystem] C:\Users\Thanush\projects\vpn\android\core\designsystem\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:navigation] C:\Users\Thanush\projects\vpn\android\core\navigation\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:navigation] C:\Users\Thanush\projects\vpn\android\core\navigation\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:model] C:\Users\Thanush\projects\vpn\android\core\model\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:model] C:\Users\Thanush\projects\vpn\android\core\model\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:common] C:\Users\Thanush\projects\vpn\android\core\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:core:common] C:\Users\Thanush\projects\vpn\android\core\common\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\daeef63388b0f00c7f2aac7c7fa16396\workspace\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\daeef63388b0f00c7f2aac7c7fa16396\workspace\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\c24068973b375377d95d7bc40b441d62\workspace\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
@@ -158,6 +171,8 @@ MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] C:\Users\Thanush\.gr
 MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\a2469044f6f84ebc346b421ef4670d6a\workspace\transformed\jetified-ui-graphics-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\6957414bc94cd70387566814d5792483\workspace\transformed\jetified-ui-geometry-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\6957414bc94cd70387566814d5792483\workspace\transformed\jetified-ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\3a15110cfd857a51ab4ca41e28675fbf\workspace\transformed\jetified-ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\3a15110cfd857a51ab4ca41e28675fbf\workspace\transformed\jetified-ui-tooling-preview-release\AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-text-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\9a92d178308a45b0607a3c8b74086519\workspace\transformed\jetified-ui-text-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-text-android:1.6.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\9a92d178308a45b0607a3c8b74086519\workspace\transformed\jetified-ui-text-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\83c00a2e0b7142c599d3ee8653d11220\workspace\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:21:5-44
@@ -170,14 +185,14 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\Thanush\.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\bb95d4a46cfdfb2b01011e6132817f69\workspace\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\8549e11cf602867d0009bbd223de753b\workspace\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\8549e11cf602867d0009bbd223de753b\workspace\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\b86590f5e81710b0d800a4c08a70c1fa\workspace\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\b86590f5e81710b0d800a4c08a70c1fa\workspace\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\db3723dda633d700ad198c2e680fc7e2\workspace\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\db3723dda633d700ad198c2e680fc7e2\workspace\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\e36d37ae8ec215f2202791c9fbbeeb68\workspace\transformed\jetified-savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\e36d37ae8ec215f2202791c9fbbeeb68\workspace\transformed\jetified-savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\40e86080e151a565d45fa63feb68c77d\workspace\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\40e86080e151a565d45fa63feb68c77d\workspace\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\b86590f5e81710b0d800a4c08a70c1fa\workspace\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\b86590f5e81710b0d800a4c08a70c1fa\workspace\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\05cdd5ffd3d4b3532cdcaba5dd886108\workspace\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\05cdd5ffd3d4b3532cdcaba5dd886108\workspace\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Thanush\.gradle\caches\9.3.0\transforms\6a91bb1ea8b94566fb9330f8c1db5bf9\workspace\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44

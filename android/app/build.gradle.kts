@@ -56,13 +56,22 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.activity)
 
+    // Compose libs
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)
 
+    // Core modules
+    implementation(project(":core:common"))
+    implementation(project(":core:designsystem"))
+    implementation(project(":core:navigation"))
+    implementation(project(":core:model"))
+
+    // Serialization
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.navigation.compose)
 
+    // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 

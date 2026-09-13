@@ -1,2 +1,0 @@
-C:\Users\Thanush\projects\vpn\android\app\src\main\java\com\safetunnel\app\SafeTunnelApplication.kt
-C:\Users\Thanush\projects\vpn\android\app\src\main\java\com\safetunnel\app\MainActivity.kt

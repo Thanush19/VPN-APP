@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.safetunnel.app-mergeDebugResources-46:/values-mn/values-mn.xml",
+            "outputFile": "com.safetunnel.app-mergeDebugResources-47:/values-mn/values-mn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Thanush\\.gradle\\caches\\9.3.0\\transforms\\7415c5e355cc1b81714958c307433b4b\\workspace\\transformed\\jetified-material3-release\\res\\values-mn\\values-mn.xml",

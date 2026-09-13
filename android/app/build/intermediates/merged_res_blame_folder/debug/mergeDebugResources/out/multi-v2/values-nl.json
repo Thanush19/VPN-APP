@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.safetunnel.app-mergeDebugResources-46:/values-nl/values-nl.xml",
+            "outputFile": "com.safetunnel.app-mergeDebugResources-47:/values-nl/values-nl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Thanush\\.gradle\\caches\\9.3.0\\transforms\\85ccfd0c046d8a96c50cad11802dc14f\\workspace\\transformed\\jetified-foundation-release\\res\\values-nl\\values-nl.xml",

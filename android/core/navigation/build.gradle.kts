@@ -50,6 +50,12 @@ dependencies {
     // Navigation
     implementation(libs.androidx.navigation.compose)
 
+    // Compose BOM
+    implementation(platform(libs.compose.bom))
+    // Compose libraries
+    implementation(libs.compose.ui)
+    implementation(libs.compose.material3)
+
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)

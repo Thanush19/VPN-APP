@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.safetunnel.app-mergeDebugResources-46:/values-gl/values-gl.xml",
+            "outputFile": "com.safetunnel.app-mergeDebugResources-47:/values-gl/values-gl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Thanush\\.gradle\\caches\\9.3.0\\transforms\\517f572f8e34671e4cf821faebdd9b02\\workspace\\transformed\\core-1.13.0\\res\\values-gl\\values-gl.xml",

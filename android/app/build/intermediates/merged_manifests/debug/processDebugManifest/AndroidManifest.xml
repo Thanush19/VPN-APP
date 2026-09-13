@@ -22,7 +22,6 @@
         android:extractNativeLibs="false"
         android:label="SafeTunnel"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.SafeTunnel" >
         <activity
             android:name="com.safetunnel.app.MainActivity"
