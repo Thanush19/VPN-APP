@@ -8,6 +8,14 @@ android {
     namespace = "com.safetunnel.core.navigation"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
+
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
