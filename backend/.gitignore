@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local Spring configuration
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# OS files
+.DS_Store
+Thumbs.db

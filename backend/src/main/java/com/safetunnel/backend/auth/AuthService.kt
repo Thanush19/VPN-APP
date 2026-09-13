@@ -18,7 +18,7 @@ class AuthService(
     private val passwordEncoder: PasswordEncoder,
     private val jwtUtils: JwtUtils,
     private val authenticationManager: AuthenticationManager
-) : UserDetailsService {
+) {
 
     fun register(email: String, rawPassword: String): AuthResponse {
         if (userRepository.existsByEmail(email)) {
@@ -59,16 +59,5 @@ class AuthService(
         val accessToken = jwtUtils.generateTokenFromUsername(email)
         val refreshToken = jwtUtils.generateRefreshToken(email)
         return AuthResponse(accessToken, refreshToken)
-    }
-
-    override fun loadUserByUsername(email: String): UserDetails {
-        val user = userRepository.findByEmail(email)
-            ?: throw UsernameNotFoundException("User not found")
-
-        return org.springframework.security.core.userdetails.User(
-            user.email,
-            user.passwordHash,
-            listOf()
-        )
     }
 }

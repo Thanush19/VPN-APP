@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
 
-import java.util.List
 import java.util.UUID
 
 @RestController
@@ -22,7 +21,7 @@ class VpnServerController(
     fun getAllServers(): ResponseEntity<List<VpnServerResponse>> {
         val servers = vpnServerRepository.findAll()
         val responses = servers.map { toResponse(it) }
-        return ResponseEntity.ok(responses.toList())
+        return ResponseEntity.ok(responses)
     }
 
     @GetMapping("/{id}")

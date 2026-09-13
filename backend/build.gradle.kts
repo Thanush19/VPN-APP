@@ -52,8 +52,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
-    testImplementation("org.mockito.kotlin:mockito-kotlin")
-    testImplementation("com.google.truth:truth")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    testImplementation("com.google.truth:truth:1.2.0")
 }
 
 flyway {
