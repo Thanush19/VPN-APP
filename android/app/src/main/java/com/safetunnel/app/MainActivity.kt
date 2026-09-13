@@ -3,20 +3,45 @@ package com.safetunnel.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.safetunnel.app.ui.HomeScreen
+import com.safetunnel.app.ui.ServersScreen
+import com.safetunnel.app.ui.SettingsScreen
+import com.safetunnel.core.designsystem.ui.theme.SafeTunnelTheme
+import com.safetunnel.core.navigation.SafeTunnelNavHost
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MaterialTheme {
-                Text("Hello SafeTunnel", modifier = Modifier.fillMaxSize().padding(24.dp))
+            SafeTunnelTheme {
+                val navController = rememberNavController()
+                SafeTunnelNavHost(
+                    navController = navController,
+                    startDestination = "home"
+                ) {
+                    composable("home") {
+                        HomeScreen(
+                            onNavigateToServers = { navController.navigate("servers") },
+                            onNavigateToSettings = { navController.navigate("settings") }
+                        )
+                    }
+                    composable("servers") {
+                        ServersScreen(
+                            onServerSelected = { server ->
+                                navController.popBackStack()
+                            },
+                            onNavigateBack = { navController.popBackStack() }
+                        )
+                    }
+                    composable("settings") {
+                        SettingsScreen(
+                            onNavigateBack = { navController.popBackStack() }
+                        )
+                    }
+                }
             }
         }
     }
