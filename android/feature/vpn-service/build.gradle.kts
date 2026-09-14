@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -22,10 +23,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-        debug {
-            applicationIdSuffix = ".debug"
-            isDebuggable = true
         }
     }
 
@@ -65,7 +62,7 @@ dependencies {
     ksp(libs.hilt.compiler)
 
     // WireGuard
-    implementation("com.wireguard.android:wireguard-android:1.0.20230914")
+    implementation(libs.wireguard.android)
 
     // Testing
     testImplementation(libs.junit)

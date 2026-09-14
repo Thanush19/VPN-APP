@@ -250,6 +250,12 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx-serialization" }
 
+# ==========================================
+# WireGuard
+# ==========================================
+
+wireguard-android = { module = "com.wireguard.android:wireguard-android", version = "1.0.20230914" }
+
 
 # ==========================================
 # Google Play Services

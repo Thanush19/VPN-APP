@@ -16,7 +16,7 @@ class AuthRepository @Inject constructor(
     private val json = Json { ignoreUnknownKeys = true }
     private val retrofit = Retrofit.Builder()
         .baseUrl("http://10.0.2.2:8080/")
-        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+        .addConverterFactory(json.asConverterFactory())
         .build()
 
     private val api = retrofit.create(AuthApi::class.java)

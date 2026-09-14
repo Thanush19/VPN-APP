@@ -9,7 +9,8 @@ data class WireGuardConfig(
     val serverPublicKey: String,
     val endpoint: String,
     val allowedIps: List<String>,
-    val persistentKeepalive: Int?
+    val persistentKeepalive: Int?,
+    val mtu: Int?
 ) {
     override fun toString(): String {
         val builder = StringBuilder()
@@ -17,6 +18,7 @@ data class WireGuardConfig(
         builder.append("PrivateKey = $privateKey\n")
         builder.append("Address = $address\n")
         dns?.let { builder.append("DNS = $it\n") }
+        mtu?.let { builder.append("MTU = $it\n") }
         builder.append("\n[Peer]\n")
         builder.append("PublicKey = $serverPublicKey\n")
         builder.append("Endpoint = $endpoint\n")
@@ -43,6 +45,7 @@ class WireGuardConfigParser {
         val privateKey = interfaceMatcher.group(1).trim()
         val address = interfaceMatcher.group(2).trim()
         val dns = interfaceMatcher.group(3)?.trim()?.takeIf { it.isNotEmpty() }
+        val mtu = interfaceMatcher.group(4)?.trim()?.toIntOrNull()
 
         val peerMatcher = peerPattern.matcher(config)
         if (!peerMatcher.find()) {
@@ -61,7 +64,8 @@ class WireGuardConfigParser {
             serverPublicKey = serverPublicKey,
             endpoint = endpoint,
             allowedIps = allowedIps,
-            persistentKeepalive = persistentKeepalive
+            persistentKeepalive = persistentKeepalive,
+            mtu = mtu
         )
     }
 

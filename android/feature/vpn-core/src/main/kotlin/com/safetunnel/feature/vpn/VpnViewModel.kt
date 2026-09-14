@@ -17,7 +17,8 @@ import javax.inject.Inject
 @HiltViewModel
 class VpnViewModel @Inject constructor(
     private val connectRepository: ConnectRepository,
-    private val keyPairManager: VpnKeyPairManager
+    private val keyPairManager: VpnKeyPairManager,
+    @ApplicationContext private val context: Context
 ) : BaseViewModel<VpnStateModel, VpnIntent>() {
 
     override val state = MutableStateFlow(VpnStateModel()).asStateFlow()
@@ -52,7 +53,6 @@ class VpnViewModel @Inject constructor(
                 )
 
                 // Start VPN service with config
-                val context = android.content.Context
                 val intent = android.content.Intent(context, SafeTunnelVpnService::class.java)
                 intent.action = SafeTunnelVpnService.ACTION_START_VPN
                 intent.putExtra(SafeTunnelVpnService.EXTRA_VPN_CONFIG, config.toConfigString())
@@ -79,7 +79,6 @@ class VpnViewModel @Inject constructor(
 
             try {
                 // Stop VPN service
-                val context = android.content.Context
                 val intent = android.content.Intent(context, SafeTunnelVpnService::class.java)
                 intent.action = SafeTunnelVpnService.ACTION_STOP_VPN
                 context.startService(intent)

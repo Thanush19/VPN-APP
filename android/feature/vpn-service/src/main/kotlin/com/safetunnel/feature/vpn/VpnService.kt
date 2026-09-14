@@ -8,13 +8,17 @@ import android.os.Build
 import android.os.ParcelFileDescriptor
 import android.util.Log
 import androidx.annotation.Nullable
+import com.safetunnel.feature.vpn.WireGuardConfig
+import com.safetunnel.feature.vpn.WireGuardConfigParser
+import com.wireguard.android.config.Config
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.FileInputStream
+import java.io.FileOutputStream
 import java.io.IOException
-import java.nio.ByteBuffer
 
 /**
  * SafeTunnel VPN Service - handles WireGuard tunnel establishment and management.
@@ -35,7 +39,7 @@ class SafeTunnelVpnService : VpnService() {
         private const val DEFAULT_MTU = 1420
     }
 
-    private var vpnInterface: ParcelFileDescriptor? = null
+    private var wgInterface: com.wireguard.android.config.WireGuardInterface? = null
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
     private var currentConfig: String? = null
 
@@ -71,10 +75,39 @@ class SafeTunnelVpnService : VpnService() {
         serviceScope.launch {
             try {
                 currentConfig = config
-                val tunnel = buildTunnel(config)
-                vpnInterface = tunnel.start()
+                // Parse the WireGuard config
+                val wgConfig = WireGuardConfigParser().parse(config)
+
+                // Establish the TUN interface via VpnService.Builder
+                val tunnel = Builder()
+                    .setSession(VPN_NAME)
+                    .setMtu(wgConfig.mtu ?: DEFAULT_MTU)
+                    .establish()
+
+                // Configure WireGuard interface
+                val wgInterface = com.wireguard.android.config.WireGuardInterface.Builder()
+                    .setPrivateKey(wgConfig.privateKey)
+                    .setInterfaceName(VPN_NAME)
+                    .addPeer(
+                        com.wireguard.android.config.Peer.Builder()
+                            .setPublicKey(wgConfig.serverPublicKey)
+                            .setEndpoint(wgConfig.endpoint)
+                            .addAllowedIp(wgConfig.allowedIps.firstOrNull() ?: "0.0.0.0/0")
+                            .setPersistentKeepalive(wgConfig.persistentKeepalive ?: 25)
+                            .build()
+                    )
+                    .setFileDescriptor(tunnel.fileDescriptor)
+                    .build()
+
+                // Start the WireGuard interface
+                wgInterface.startInterface()
+
                 Log.d(TAG, "VPN tunnel started successfully")
-            } catch (e: IOException) {
+
+                // Keep the service running while the interface is active
+                // We can wait here until the interface is stopped or the service is stopped
+                // For simplicity, we'll just keep the service running and stop the interface when the service stops
+            } catch (e: Exception) {
                 Log.e(TAG, "Failed to start VPN tunnel", e)
             }
         }
@@ -83,74 +116,19 @@ class SafeTunnelVpnService : VpnService() {
     private fun stopVpn() {
         serviceScope.launch {
             try {
-                vpnInterface?.close()
-                vpnInterface = null
+                wgInterface?.stopInterface()
+                wgInterface = null
                 currentConfig = null
                 Log.d(TAG, "VPN tunnel stopped")
-            } catch (e: IOException) {
+            } catch (e: Exception) {
                 Log.e(TAG, "Failed to stop VPN tunnel", e)
             }
         }
     }
 
-    @Throws(IOException::class)
-    private fun buildTunnel(config: String): Builder {
-        Log.d(TAG, "Building tunnel with config")
-
-        val parsedConfig = parseWireGuardConfig(config)
-
-        val builder = Builder()
-        builder.setSession(VPN_NAME)
-        builder.setMtu(DEFAULT_MTU)
-
-        // Add DNS server (can be overridden from config)
-        val dns = parsedConfig["DNS"] ?: DEFAULT_DNS_SERVER
-        builder.addDnsServer(dns)
-
-        // Add routes - for now, route all traffic through VPN
-        builder.addRoute("0.0.0.0", 0)
-
-        // Add the app package name to exempt it from VPN routing
-        // This prevents the VPN traffic from routing back through itself
-        builder.addDisallowedApplication(packageName)
-
-        return builder
-    }
-
-    /**
-     * Simple WireGuard config parser that extracts key-value pairs.
-     */
-    private fun parseWireGuardConfig(config: String): Map<String, String> {
-        val result = mutableMapOf<String, String>()
-        val lines = config.lines()
-
-        for (line in lines) {
-            val trimmed = line.trim()
-
-            // Skip section headers and empty lines
-            if (trimmed.startsWith("[") || trimmed.isEmpty()) continue
-
-            // Parse key = value
-            if ("=" in trimmed) {
-                val parts = trimmed.split("=", limit = 2)
-                if (parts.size == 2) {
-                    val key = parts[0].trim()
-                    val value = parts[1].trim()
-                    result[key] = value
-                }
-            }
-        }
-
-        return result
-    }
-
     override fun onDestroy() {
         super.onDestroy()
-        try {
-            vpnInterface?.close()
-        } catch (e: IOException) {
-            Log.e(TAG, "Error closing VPN interface", e)
-        }
+        stopVpn() // Ensure the interface is stopped when service is destroyed
         Log.d(TAG, "VPN Service destroyed")
     }
 
